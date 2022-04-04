@@ -28,9 +28,23 @@ function firstNonConsecutive(arr) {
   return null;
 }
 //best practice
-function firstNonConsecutive(arr) {
+function firstNonConsecutive2(arr) {
   let result = arr.find((val, index) => val !== index + arr[0]);
 
   return Number.isInteger(result) ? result : null;
 }
 
+//4.Merge two arrays the result should be in descending order and there should be no duplicates 
+
+//My solution I concatenated the arrays filtered using the index of to find the first instance of that element and used sort method to sort ascending
+function mergeArrays(arr1, arr2) {
+  let mergedArr = arr1.concat(arr2);
+  mergedArr = mergedArr.filter(
+    (num, index) => mergedArr.indexOf(num) === index
+  );
+  return mergedArr.sort((a, b) => a - b);
+}
+//other solution seems to convert concat sort and wrap that in method to convert to a set to get the unique values then use the .from method to turn back to an array
+function mergeArrays2(arr1, arr2) {
+  return Array.from(new Set(arr1.concat(arr2).sort((a, b) => a - b)));
+}
