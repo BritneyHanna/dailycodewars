@@ -13,7 +13,7 @@ function stringToArray(string) {
 
 
 //as an arrow function
-const stringToArray = (string) => string.split(" ");
+const stringToArray2 = (string) => string.split(" ");
 
 
 
@@ -48,3 +48,15 @@ function mergeArrays(arr1, arr2) {
 function mergeArrays2(arr1, arr2) {
   return Array.from(new Set(arr1.concat(arr2).sort((a, b) => a - b)));
 }
+//Given an array of integers, return a new array with each value doubled.
+//My solution I used the map method
+let doubledArr = (arrNum) => arrNum.map((num) => num * 2);
+
+
+
+// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
+//My solution I used the join method with a space as the separator 
+function smash (words) {
+   return words.join(" ")
+};
+
