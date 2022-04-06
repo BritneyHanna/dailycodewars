@@ -48,15 +48,34 @@ function mergeArrays(arr1, arr2) {
 function mergeArrays2(arr1, arr2) {
   return Array.from(new Set(arr1.concat(arr2).sort((a, b) => a - b)));
 }
-//Given an array of integers, return a new array with each value doubled.
+//5.Given an array of integers, return a new array with each value doubled.
 //My solution I used the map method
 let doubledArr = (arrNum) => arrNum.map((num) => num * 2);
 
 
 
-// Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
+//6. Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
 //My solution I used the join method with a space as the separator 
 function smash (words) {
    return words.join(" ")
 };
+//7.Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+//My solution
+
+function removeEveryOther(arr) {
+  const modifiedarr = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (i % 2 === 0) {
+      modifiedarr.push(arr[i]);
+    }
+  }
+  return modifiedarr;
+}
+//solution I really liked for each item in the array he used the .splice method -by adding one to the index he ensured he removed every other element 
+function removeEveryOther(arr) {
+  arr.forEach((item, index) => {
+    arr.splice(index + 1, 1);
+  });
+  return arr;
+}
 
