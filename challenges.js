@@ -79,3 +79,14 @@ function removeEveryOther(arr) {
   return arr;
 }
 
+//8.Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+// The output should be two capital letters with a dot separating them. *** need to review 
+
+//best practice 
+function abbrevName(name) {
+  return name
+    .split(" ")
+    .map((i) => i[0].toUpperCase())
+    .join(".");
+}
