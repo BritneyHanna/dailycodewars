@@ -90,3 +90,21 @@ function abbrevName(name) {
     .map((i) => i[0].toUpperCase())
     .join(".");
 }
+//9 Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string. The input will never be an empty string
+
+//My solution
+function fakeBin(x) {
+  const newarr = x
+    .split("")
+    .map((num) => (num < 5 ? 0 : 1))
+    .join("");
+
+  return newarr;
+}
+ // Best practice 
+ function fakeBi2n(x) {
+   return x
+     .split("")
+     .map((n) => (n < 5 ? 0 : 1))
+     .join("");
+ }
