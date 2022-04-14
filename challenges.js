@@ -108,3 +108,16 @@ function fakeBin(x) {
      .map((n) => (n < 5 ? 0 : 1))
      .join("");
  }
+
+ //Given a random non-negative number, you have to return the digits of this number within an array in reverse order.
+ //MY solution I used the .from method to covert to an array. To achieve this I first converted the number to a string so the .from method be applicable and used the second paramenter which is the callback function to convert each element of the array back to a number. Then I used the .reverse method to get it in reverse order 
+
+ function digitize(n) {
+   const reversed = Array.from(String(n), (n) => Number(n)).reverse();
+   return reversed;
+}
+ 
+// This other solution I really liked 
+function digitize2(n) {
+  return String(n).split("").map(Number).reverse();
+}
