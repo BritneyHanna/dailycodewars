@@ -121,3 +121,18 @@ function fakeBin(x) {
 function digitize2(n) {
   return String(n).split("").map(Number).reverse();
 }
+
+//10.Return the average of the given array rounded down to its nearest integer.
+// note to self outer function has to return also the callback function has to return since the arrow function is  multiple lines
+function getAverage(marks) {
+  return Math.floor(
+    marks.reduce((a, c) => {
+      return a + c;
+    }, 0) / marks.length
+  );
+}
+
+// More concise solution
+function getAverage(marks) {
+  return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
+}
