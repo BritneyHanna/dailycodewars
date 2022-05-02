@@ -111,3 +111,21 @@ function nearestSq(n) {
 function friend(friends) {
   return friends.filter((el) => el.length === 4);
 }
+
+
+//Write a function that converts any sentence into a V A P O R W A V E sentence. a V A P O R W A V E sentence converts all the letters into uppercase, and adds 2 spaces between each letter (or special character) to create this V A P O R W A V E effect.
+
+// Note that spaces should be ignored in this case.
+
+//"Lets go to the movies"       -->  "L  E  T  S  G  O  T  O  T  H  E  M  O  V  I  E  S"
+
+function vaporcode(string) {
+  let str = [];
+  for (let i = 0; i < string.length; i++) {
+    if (string[i] != " ") {
+      str.push(string[i]);
+    }
+  }
+  return str.join("  ").toUpperCase();
+}
+         
