@@ -136,3 +136,15 @@ function getAverage(marks) {
 function getAverage(marks) {
   return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
 }
+
+
+//You are given a string containing a sequence of character sequences separated by commas.
+
+//Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+//If the string is empty return null
+const array = (arr) => {
+  arr = arr.split(',')
+  arr.pop()
+  arr.shift()
+  return arr.join(' ') === '' ? null : arr.join(' ')
+}
