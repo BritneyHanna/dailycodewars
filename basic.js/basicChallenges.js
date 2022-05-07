@@ -370,4 +370,13 @@ function vaporcode(string) {
   }
   return str.join("  ").toUpperCase();
 }
-         
+//************************************************************** */
+// We have implemented a function wrap(value) that takes a value of arbitrary type and wraps it in a new JavaScript Object or Python Dict setting the 'value' key on the new Object or Dict to the passed-in value.Unfortunately, the code is not working as designed. Please fix the code so that it behaves as specified.
+
+function wrap(value) {
+  return {
+    value: value,
+  };
+}
+const wrap2 = (value) => ({ value });
+//parethesis are used with an arrow function when you are returning an object 
