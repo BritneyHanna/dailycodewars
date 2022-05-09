@@ -347,3 +347,10 @@ function correctTail(bod, tail) {
     return false;
   }
 }
+
+// Boy or girl Kata test if there is an X or Y chromosome
+function chromosomeCheck(sperm) {
+  if (sperm.includes("Y"))
+    return "Congratulations! You're going to have a son.";
+  return "Congratulations! You're going to have a daughter.";
+}
