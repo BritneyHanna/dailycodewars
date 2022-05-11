@@ -173,3 +173,15 @@ function multipleOfIndex(array) {
 function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((a, c) => a + c, 0);
 }
+
+//Simple, remove the spaces from the string, then return the resultant string.
+function noSpace(x) {
+  return x
+    .split(" ")
+    .filter((el) => {
+      return el !== "";
+    })
+    .join("");
+}
+//solution with replace 
+const noSpace = (x) => x.replace(/ /g, "");
