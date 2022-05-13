@@ -183,5 +183,10 @@ function noSpace(x) {
     })
     .join("");
 }
+
+//I refactored and eliminated the reduce method
+function noSpace(x) {
+  return x.split(" ").join("");
+}
 //solution with replace 
 const noSpace = (x) => x.replace(/ /g, "");
