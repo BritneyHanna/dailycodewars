@@ -190,3 +190,18 @@ function noSpace(x) {
 }
 //solution with replace 
 const noSpace = (x) => x.replace(/ /g, "");
+//You get an array of numbers, return the sum of all of the positives ones.
+function positiveSum(arr) {
+  return arr.filter((el) => el > 0).reduce((a, c) => a + c, 0);
+}
+
+// other solution with a for loop
+function positiveSum(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > 0) {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
