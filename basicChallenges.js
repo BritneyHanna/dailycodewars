@@ -132,15 +132,15 @@ function getAverage(marks) {
   );
 }
 
-// More concise solution
+//11. More concise solution
 function getAverage(marks) {
   return Math.floor(marks.reduce((sum, x) => sum + x) / marks.length);
 }
 
 
-//You are given a string containing a sequence of character sequences separated by commas.
+//12.You are given a string containing a sequence of character sequences separated by commas.
 
-//Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
+//13.Write a function which returns a new string containing the same character sequences except the first and the last ones but this time separated by spaces.
 //If the string is empty return null
 const array = (arr) => {
   arr = arr.split(',')
@@ -149,11 +149,11 @@ const array = (arr) => {
   return arr.join(' ') === '' ? null : arr.join(' ')
 }
 
-// Create a function with two arguments that will return an array of the first (n) multiples of (x).
+// 14.Create a function with two arguments that will return an array of the first (n) multiples of (x).
 
-// Assume both the given number and the number of times to count will be positive numbers greater than 0.
+//15. Assume both the given number and the number of times to count will be positive numbers greater than 0.
 
-// Return the results as an array 
+//16. Return the results as an array 
 function countBy(x, n) {
   let z = [];
   for (let i = 1; i <= n; i++) {
@@ -162,11 +162,11 @@ function countBy(x, n) {
   return z;
 }
 
-//Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
+//17.Return a new array consisting of elements which are multiple of their own index in input array (length > 1).
 function multipleOfIndex(array) {
   return array.filter((el, index) => el % index === 0);
 }
-//I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
+//18.I'm new to coding and now I want to get the sum of two arrays...actually the sum of all their elements. I'll appreciate for your help.
 
 //P.S. Each array includes only integer numbers. Output is a number too.
 
@@ -174,7 +174,7 @@ function arrayPlusArray(arr1, arr2) {
   return arr1.concat(arr2).reduce((a, c) => a + c, 0);
 }
 
-//Simple, remove the spaces from the string, then return the resultant string.
+//19.Simple, remove the spaces from the string, then return the resultant string.
 function noSpace(x) {
   return x
     .split(" ")
@@ -184,13 +184,13 @@ function noSpace(x) {
     .join("");
 }
 
-//I refactored and eliminated the reduce method
+//20.I refactored and eliminated the reduce method
 function noSpace(x) {
   return x.split(" ").join("");
 }
 //solution with replace 
 const noSpace = (x) => x.replace(/ /g, "");
-//You get an array of numbers, return the sum of all of the positives ones.
+//21.You get an array of numbers, return the sum of all of the positives ones.
 function positiveSum(arr) {
   return arr.filter((el) => el > 0).reduce((a, c) => a + c, 0);
 }
@@ -205,7 +205,7 @@ function positiveSum(arr) {
   }
   return sum;
 }
-//We need a function that can transform a string into a number. What ways of achieving this do you know?
+//22.We need a function that can transform a string into a number. What ways of achieving this do you know?
 const stringToNumber = function (str) {
   // put your code here
   return Number(str);
@@ -219,3 +219,5 @@ let stringToNumberb = function (str) {
 let stringToNumberc = function (str) {
   return +str;
 };
+
+
