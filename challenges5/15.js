@@ -36,3 +36,29 @@ function makeNegative(num) {
   return !num >= 0 ? -Math.abs(num) : num;
   //or return !num>=0?-1*num:num
 }
+//Implement a function which convert the given boolean value into its string representation.
+function booleanToString(b){
+  return b.toString()
+}
+//Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+function between(a, b) {
+  let arr = [];
+
+  for (let i = a; i <= b; i++) {
+    arr.push(i);
+  }
+
+  return arr;
+}
+
+// **** need to review
+// Write a generic function chainer that takes a starting value, and an array of functions to execute on it (array of symbols for Ruby).
+
+// The input for each function is the output of the previous function (except the first function, which takes the starting value as its input). Return the final value after execution is complete.
+
+//best practice answer 
+function chain(v, fns) {
+  return fns.reduce(function (v, fn) {
+    return fn(v);
+  }, v);
+}
