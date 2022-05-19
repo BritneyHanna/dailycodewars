@@ -80,3 +80,26 @@ function stringClean(s) {
 function binToDec(bin){
   return parseInt(bin,2);
 }
+//Write a function that will check if two given characters are the same case.
+
+// If either of the characters is not a letter, return -1
+// If both characters are the same case, return 1
+// If both characters are letters, but not the same case, return 0
+
+function sameCase(a, b) {
+    //since non strings dont have an upper and lower case version if the uppercase version equals the lowercase then its not a string
+  if (
+    a.toLowerCase() === a.toUpperCase() ||
+    b.toLowerCase() === b.toUpperCase()
+  ) {
+      return -1;
+      //this tests if the letter is lower or uppercase if a to uppercase equals a before changes then a was uppercase. We do the same for b to determine if they are the same case
+  } else if (
+    (a.toUpperCase() === a && b.toUpperCase() == b) ||
+    (a.toLowerCase() === a && b.toLowerCase() == b)
+  ) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
