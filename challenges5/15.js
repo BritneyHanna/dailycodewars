@@ -103,3 +103,25 @@ function sameCase(a, b) {
     return 0;
   }
 }
+
+//There was a test in your class and you passed it. Congratulations!
+// But you're an ambitious person. You want to know if you're better than the average student in your class.
+
+// You receive an array with your peers' test scores. Now calculate the average and compare your score!
+
+// Return True if you're better, else False!
+
+function betterThanAverage(classPoints, yourPoints) {
+  let avg =
+    classPoints.reduce((a, c) => {
+      return a + c;
+    }, 0) / classPoints.length;
+  console.log(avg);
+  return yourPoints > avg;
+}
+// *** need to review this one For this game of BINGO, you will receive a single array of 10 numbers from 1 to 26 as an input. Duplicate numbers within the array are possible.
+
+//Each number corresponds to their alphabetical order letter (e.g. 1 = A. 2 = B, etc). Write a function where you will win the game if your numbers can spell "BINGO". They do not need to be in the right order in the input array). Otherwise you will lose. Your outputs should be "WIN" or "LOSE" respectively.
+function bingo(a) {
+  return [2, 9, 14, 7, 15].every((x) => a.includes(x)) ? "WIN" : "LOSE";
+}
