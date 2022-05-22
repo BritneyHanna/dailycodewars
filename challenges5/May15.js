@@ -125,3 +125,6 @@ function betterThanAverage(classPoints, yourPoints) {
 function bingo(a) {
   return [2, 9, 14, 7, 15].every((x) => a.includes(x)) ? "WIN" : "LOSE";
 }
+
+// you first create an array with the numerical value of each letter in bingo then you call the .every method on the bingo array
+//for every element in bingo you check if it is included in the original array. If yes they you win
