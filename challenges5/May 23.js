@@ -25,3 +25,30 @@ function interest(P, r, n) {
   return result;
 }
 console.log(interest(100, 0.1, 2));
+//Your task is to sum the differences between consecutive pairs in the array in descending order.
+//Sum: (10 - 2) + (2 - 1) = 8 + 1 = 9
+
+// If the array is empty or the array has only one element the result should be 0 (Nothing in Haskell ).
+
+function sumOfDifferences(arr) {
+  let sortedarr = arr.sort((a, b) => {
+    if (a < b) {
+      return 1;
+    } else if (a > b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+  let total = 0;
+  for (let i = 0; i < sortedarr.length - 1; i++) {
+    total += sortedarr[i] - sortedarr[i + 1];
+  }
+  return total;
+}
+//Other solution
+const sumOfDifferences = (arr) =>
+  arr
+    .sort((a, b) => b - a)
+    .map((a, i) => a - arr[i + 1] || 0)
+    .reduce((a, b) => a + b, 0);
