@@ -258,3 +258,7 @@ var replaceDots2 = function (str) {
   // added the g so that replace is run for all occurences in the string
   return str.replace(/\./g, "-");
 };
+//********************* */
+// This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+const simpleMultiplication = (number) =>
+  number % 2 === 0 ? number * 8 : number * 9;
