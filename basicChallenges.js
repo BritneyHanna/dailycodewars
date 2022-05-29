@@ -233,7 +233,12 @@ function getDivisorsCnt(n) {
   }
   return count;
 }
-
+//******************************************************* */
+//Write a function that accepts an integer n and a string s as parameters, and returns a string of s repeated exactly n times.
+function repeatStr(n, s) {
+  return s.repeat(n);
+}
+//*********************************************************** */
 //The code provided is supposed replace all the dots . in the specified String str with dashes -
 
 // But it's not working properly.
@@ -253,4 +258,3 @@ var replaceDots2 = function (str) {
   // added the g so that replace is run for all occurences in the string
   return str.replace(/\./g, "-");
 };
-
