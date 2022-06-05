@@ -46,3 +46,20 @@ function insertDash(num) {
       return acc + c;
     }, "");
 }
+
+//Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+//eg.* "String"      -> "SSttrriinngg"
+function doubleChar(str) {
+  let repeated;
+  return (repeated = str
+    .split("")
+    .map((el) => `${el}${el}`)
+    .join(""));
+}
+
+//Best practice solution
+const doubleChar = (str) =>
+  str
+    .split("")
+    .map((c) => c + c)
+    .join("");
