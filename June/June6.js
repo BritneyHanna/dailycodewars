@@ -43,3 +43,38 @@ function last(x) {
     .split(" ")
     .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
+
+// Remove words from the sentence if they contain exactly one exclamation mark. Words are separated by a single space, without leading/trailing spaces.
+//remove("Hi Hi! Hi!") === "Hi"
+function remove(string) {
+  //split string
+    string = string.split(" ");
+    
+    let newstr = [];
+
+
+    for (let i = 0; i < string.length; i++) {
+      // every time the outer loop runs the count is reset to 0 for each word
+        let count = 0;
+        //for every word in the loop the count is incremented by 1 if the word indexis !
+    for (let j = 0; j < string[i].length; j++) {
+      if (string[i][j] === "!") {
+        count++;
+      }
+        }
+        //back to the outer loop if the count is not 1 then we push that word to the new array that will hold the new str
+    if (count !== 1) {
+      newstr.push(string[i]);
+    }
+    }
+    // once everything is pushed we use the join method to convert that array back to a string 
+  return newstr.join(" ");
+}
+
+//Other solution need to review 
+function remove2(s) {
+  return s
+    .split(" ")
+    .filter((i) => i.split("!").length != 2)
+    .join(" ");
+}
