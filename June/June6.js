@@ -88,3 +88,5 @@ function remove2(s) {
 function sayHello(name, city, state) {
   return `Hello, ${name.join(" ")}! Welcome to ${city}, ${state}!`;
 }
+//Now you have to write a function that takes an argument and returns the square of it.
+let square = (num) => num ** 2;
