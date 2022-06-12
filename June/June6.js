@@ -19,6 +19,10 @@ function vowelIndices(word) {
 
 // Given a string of words (x), you need to return an array of the words, sorted alphabetically by the final character in each.
 
+
+
+
+
 // If two words have the same last letter, they returned array should show them in the order they appeared in the given string.
 
 function last(x) {
@@ -43,6 +47,10 @@ function last(x) {
     .split(" ")
     .sort((a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1));
 }
+
+
+
+
 
 // Remove words from the sentence if they contain exactly one exclamation mark. Words are separated by a single space, without leading/trailing spaces.
 //remove("Hi Hi! Hi!") === "Hi"
@@ -79,6 +87,9 @@ function remove2(s) {
     .join(" ");
 }
 
+
+
+
 // Create a method sayHello/say_hello/SayHello that takes as input a name, city, and state to welcome a person. Note that name will be an array consisting of one or more values that should be joined together with one space between each, and the length of the name array in test cases will vary.
 
 // Example:
@@ -90,3 +101,48 @@ function sayHello(name, city, state) {
 }
 //Now you have to write a function that takes an argument and returns the square of it.
 let square = (num) => num ** 2;
+
+
+function minSum(arr) {
+  arr.sort((a, b) => a - b);
+
+  let sum = 0;
+
+  for (let i = 0; i < arr.length / 2; i++) {
+    sum += arr[i] * arr[arr.length - 1 - i];
+  }
+  return sum;
+}
+
+
+
+  
+//Given an array of integers , Find the minimum sum which is obtained from summing each Two integers product .
+
+  // take the largest num and multiply by the smallest and repeat for the remaining number
+  // I can accomplish this by ordering in ascending order and then multiplying the one at the front by the one by the back 
+  
+  function minSum(arr) {
+    //sort array
+ arr.sort((a,b)=>a-b)
+    
+ let sum=0;
+    //since we are taking an element from either end of the array we want the loop to arr.length/2
+ for (let i=0;i<arr.length/2;i++){
+   //add the first smallest element to the next element from the end 
+
+ sum+=arr[i]*arr[arr.length-1-i]
+ }
+ return sum
+}
+
+
+//Other solution using array methods
+
+const minSum2 = (arr) =>
+  arr.sort((a, b) => a - b).reduce((pre, val) => pre + val * arr.pop(), 0);
+
+  //sort the array reduce add the the current * the last value removed with arr.pop to the total
+
+
+
