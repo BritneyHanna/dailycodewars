@@ -6,4 +6,23 @@ function evenNumbers(array, number) {
   return array.filter((el) => el % 2 === 0).splice(-number);
 }
 
-//.splice -3 will elete and return the last 3 numbers, -2 last 2 numbers etc 
+//.splice -3 will delete and return the last 3 numbers, -2 last 2 numbers etc
+//************************************************************************* */
+
+
+// Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
+//https://www.codewars.com/kata/5748838ce2fab90b86001b1a/javascript
+
+function squareArea(A) {
+  //multiply the arch by 4 to get the circmfrence then divide by 2 and PI to obtain the radius. Square this radius to get the area of the square
+  //in order to round to 2 decimals I used .toFixed method and converted the resulting string back to a number
+  let result = ((A * 4) / 2 / Math.PI) ** 2;
+  return Number(result.toFixed(2));
+}
+
+//**************************************************************************** */
+
+//Create a method to see whether the string is ALL CAPS. REVIEW 
+String.prototype.isUpperCase = function () {
+  return this == this.toUpperCase();
+};
