@@ -16,7 +16,6 @@ function high(s) {
   return s.split(" ")[as.indexOf(Math.max(...as))];
 }
 
-
 // You can print your name on a billboard ad. Find out how much it will cost you. Each letter has a default price of £30, but that can be different if you are given 2 parameters instead of 1.
 
 // You can not use multiplier "*" operator.
@@ -28,12 +27,11 @@ function billboard(name, price = 30) {
   return name.reduce((a, c) => {
     return a + price;
   }, 0);
-} 
+}
 
 //Write a function insert_dash(num) / insertDash(num) / InsertDash(int num) that will insert dashes ('-') between each two odd digits in num. For example: if num is 454793 the output should be 4547-9-3. Don't count zero as an odd digit.
 //Note that the number will always be non-negative (>= 0).
 //****** Need to review  */
-
 
 function insertDash(num) {
   return num
@@ -64,14 +62,13 @@ const doubleChar = (str) =>
     .map((c) => c + c)
     .join("");
 
-
-    //Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
+//Create a function that returns the sum of the two lowest positive numbers given an array of minimum 4 positive integers. No floats or non-positive integers will be passed.
 
 // For example, when an array is passed like [19, 5, 42, 2, 77], the output should be 7.
-function sumTwoSmallestNumbers(numbers) {  
-  numbers.sort((a,b) => a - b);
+function sumTwoSmallestNumbers(numbers) {
+  numbers.sort((a, b) => a - b);
   return numbers[0] + numbers[1];
-};
+}
 //You will be given an array of objects (associative arrays in PHP, tables in COBOL) representing data about developers who have signed up to attend the next coding meetup that you are organising.
 
 // Your task is to return an array where each object will have a new property 'greeting' with the following string value:
