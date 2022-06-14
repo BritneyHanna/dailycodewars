@@ -26,3 +26,22 @@ function squareArea(A) {
 String.prototype.isUpperCase = function () {
   return this == this.toUpperCase();
 };
+//************************************************************************* */
+// Write a function which takes a list of strings and returns each line prepended by the correct number.
+
+// The numbering starts at 1. The format is n: string.Notice the colon and space in between.
+// [] --> []
+// ["a", "b", "c"] --> ["1: a", "2: b", "3: c"]
+
+let number = function (array) {
+  return array.map((el, i) => `${i + 1}: ${el}`);
+};
+
+//Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty ( zero length ).
+
+function solution(a, b) {
+  return a.length > b.length ? `${b}${a}${b}` : `${a}${b}${a}`;
+}
+
+
+
