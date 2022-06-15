@@ -1,14 +1,12 @@
 //Given an array of numbers, return a new array of length number containing the last even numbers from the original array (in the same order). The original array will be not empty and will contain at least "number" even numbers.
 //eg. ([1, 2, 3, 4, 5, 6, 7, 8, 9], 3) => [4, 6, 8]
 
-
 function evenNumbers(array, number) {
   return array.filter((el) => el % 2 === 0).splice(-number);
 }
 
 //.splice -3 will delete and return the last 3 numbers, -2 last 2 numbers etc
 //************************************************************************* */
-
 
 // Complete the function that calculates the area of the red square, when the length of the circular arc A is given as the input. Return the result rounded to two decimals.
 //https://www.codewars.com/kata/5748838ce2fab90b86001b1a/javascript
@@ -22,7 +20,7 @@ function squareArea(A) {
 
 //**************************************************************************** */
 
-//Create a method to see whether the string is ALL CAPS. REVIEW 
+//Create a method to see whether the string is ALL CAPS. REVIEW
 String.prototype.isUpperCase = function () {
   return this == this.toUpperCase();
 };
@@ -42,6 +40,62 @@ let number = function (array) {
 function solution(a, b) {
   return a.length > b.length ? `${b}${a}${b}` : `${a}${b}${a}`;
 }
+//Let's play! You have to return which player won! In case of a draw return Draw!.
 
+// Examples(Input1, Input2 --> Output):
 
+// "scissors", "paper" --> "Player 1 won!"
+// "scissors", "rock" --> "Player 2 won!"
+// "paper", "paper" --> "Draw!"
+const rps = (p1, p2) => {
+  if (p1 == p2) return "Draw!";
 
+  if (p1 == "rock" && p2 == "scissors") return "Player 1 won!";
+  else if (p1 == "scissors" && p2 == "paper") return "Player 1 won!";
+  else if (p1 == "paper" && p2 == "rock") return "Player 1 won!";
+  else return "Player 2 won!";
+};
+//Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+// For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+
+function squareSum(numbers) {
+  let sum = 0;
+  numbers.forEach((number) => {
+    sum += number * number;
+  });
+  return sum;
+}
+
+//or
+
+function squareSumb(numbers) {
+  return numbers.reduce(function (sum, n) {
+    return n * n + sum;
+  }, 0);
+}
+function isNarcissistic(n) {
+let arr=Array.from(n.toString())
+arr=arr.map(el=>Number(el))
+  let sum=0;
+for (let i=0;i<arr.length;1++){
+  sum+=arr[i]**arr.length
+}
+  return sum===arr
+
+  
+}
+//*************************************************************************** */
+
+//A Narcissistic Number is a number of length l in which the sum of its digits to the power of l is equal to the original number. If this seems confusing, refer to the example below.
+
+// Ex: 153, where l = 3 ( the number of digits in 153 )
+// 13 + 53 + 33 = 153
+
+// Write a function that, given n, returns whether or not n is a Narcissistic Number.
+
+// Need to Review
+
+function isNarcissistic(n) {
+    return String(n).split('').reduce((acc, curr) => acc + Math.pow(+curr, String(n).length), 0) === n;
+}
