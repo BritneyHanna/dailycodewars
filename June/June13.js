@@ -99,3 +99,34 @@ for (let i=0;i<arr.length;1++){
 function isNarcissistic(n) {
     return String(n).split('').reduce((acc, curr) => acc + Math.pow(+curr, String(n).length), 0) === n;
 }
+
+//********************************************************************************************** */
+//You ask a small girl,"How old are you?" She always says, "x years old", where x is a random number between 0 and 9.
+
+// Write a program that returns the girl's age (0-9) as an integer.
+
+// Assume the test input string is always a valid string. For example, the test input may be "1 year old" or "5 years old". The first character in the string is always a number.
+function getAge(inputString){
+  return Number(inputString.split(' ')[0]);
+}
+//********************************************************************************************************* */
+//The following was a question that I received during a technical interview for an entry level software developer position. I thought I'd post it here so that everyone could give it a go:
+
+// You are given an unsorted array containing all the integers from 0 to 100 inclusively. However, one number is missing. Write a function to find and return this number. What are the time and space complexities of your solution?
+//NEED TO REVIEW
+//My solution
+//first sorted the numbers in ascending order then did a for loop I didnt set the icrementation since the instructions said 1 number would always be missing
+//I ran the loop until I found a number that didnt match its index. I then returned the index since this would correspond with whichever number was supposed to be there 
+function missingNo(nums) {
+  nums.sort((a, b) => a - b);
+  console.log(nums);
+  for (let i=0;;i++){
+    if (nums[i]!=i){
+      return i;
+      break;
+    }
+  }
+   
+  
+ 
+}
