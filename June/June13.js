@@ -140,3 +140,17 @@ function missingNo(nums) {
 const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return distanceToPump <= fuelLeft * mpg;
 };
+//******************************************************************************* */
+// This time no story, no theory. The examples below show you how to write function accum:
+
+// Examples:
+// accum("abcd") -> "A-Bb-Ccc-Dddd"
+// accum("RqaEzty") -> "R-Qq-Aaa-Eeee-Zzzzz-Tttttt-Yyyyyyy"
+// accum("cwAt") -> "C-Ww-Aaa-Tttt"
+//to solve I used the a  string method .repeat  and joined with a - as a separator
+
+function accum(s) {
+return s.split('').map((el,index)=>{
+  return `${el.toUpperCase()}${el.toLowerCase().repeat(index)}`
+}).join('-')
+}
