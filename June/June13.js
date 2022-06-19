@@ -152,5 +152,12 @@ const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
 function accum(s) {
 return s.split('').map((el,index)=>{
   return `${el.toUpperCase()}${el.toLowerCase().repeat(index)}`
+  
 }).join('-')
+}
+
+// how to solve with reduce
+
+function accum2(s) {
+  return [...s.toUpperCase()].reduce((acc, cur, index) => acc + "-" + cur + cur.toLowerCase().repeat(index))
 }
