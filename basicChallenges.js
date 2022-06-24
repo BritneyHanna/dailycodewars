@@ -266,6 +266,7 @@ const simpleMultiplication = (number) =>
   function nameShuffler(str) {
     return str.split(" ").reverse().join(" ");
 }
+//******************************************************************************************* */
   //Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
   function powersOfTwo(n) {
     let arr = [];
@@ -273,4 +274,16 @@ const simpleMultiplication = (number) =>
       arr.push(2 ** i);
     }
     return arr;
+}
+
+//******************************************************************************** */
+  //Build a function that returns an array of integers from n to 1 where n>0.
+
+// Example : n=5 --> [5,4,3,2,1]
+const reverseSeq = (n) => {
+  let arr = [];
+  for (let i = n; i >= 1; i--) {
+    arr.push(i);
   }
+  return arr;
+};
