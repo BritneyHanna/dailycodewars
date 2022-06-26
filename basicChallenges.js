@@ -259,6 +259,7 @@ var replaceDots2 = function (str) {
   return str.replace(/\./g, "-");
 };
 //********************* */
+
 // This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
 const simpleMultiplication = (number) =>
   number % 2 === 0 ? number * 8 : number * 9;
@@ -267,7 +268,8 @@ const simpleMultiplication = (number) =>
     return str.split(" ").reverse().join(" ");
 }
 //******************************************************************************************* */
-  //Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+ 
+//Complete the function that takes a non-negative integer n as input, and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
   function powersOfTwo(n) {
     let arr = [];
     for (let i = 0; i <= n; i++) {
@@ -290,3 +292,14 @@ const reverseSeq = (n) => {
 //Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
 
 const even_or_odd = (number) => (number % 2 === 0 ? "Even" : "Odd");
+//******************************************************************************************************************************************* */
+
+//Your coworker was supposed to write a simple helper function to capitalize a string (that contains a single word) before they went on vacation.
+
+// Unfortunately, they have now left and the code they gave you doesn't work. Fix the helper function they wrote so that it works as intended (i.e. make the first character in the string "word" upper case).
+
+// Don't worry about numbers, special characters, or non-string types being passed to the function. The string lengths will be from 1 character up to 10 characters, but will never be empty.
+function capitalizeWord(word) {
+  const newword = word[0].toUpperCase().concat(word.slice(1));
+  return newword;
+}
