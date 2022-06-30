@@ -311,3 +311,7 @@ function setAlarm(employed, vacation) {
 }
 //In this kata you will create a function that takes in a list and returns a list with the reverse order.
 const reverseList = (list) => list.reverse();
+//Very simple, given an integer or a floating-point number, find its opposite.
+function opposite(number) {
+  return -1 * number;
+}
