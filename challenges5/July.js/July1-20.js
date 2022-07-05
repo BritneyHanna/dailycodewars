@@ -14,7 +14,7 @@ function reduce(fraction) {
 }
 
 
-
+//******************************************************************************* */
 
 
 
@@ -46,3 +46,19 @@ let number = function (busStops) {
 
 // Other solution on codewars
 const numberb = (busStops) => busStops.reduce((p, n) => p + n[0] - n[1], 0);
+
+
+//#############################################################################
+
+//As a part of this Kata, you need to create a function that when provided with a triplet, returns the index of the numerical element that lies between the other two elements.
+
+// The input to the function will be an array of three distinct numbers (Haskell: a tuple).
+
+// For example:
+
+// gimme([2, 3, 1]) => 0
+function gimme(triplet) {
+    //important to copy the array because sort will mutate the original array in place 
+  const ordered = [...triplet].sort((a, b) => a - b)[1];
+  return triplet.indexOf(ordered);
+}
