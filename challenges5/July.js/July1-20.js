@@ -62,3 +62,19 @@ function gimme(triplet) {
   const ordered = [...triplet].sort((a, b) => a - b)[1];
   return triplet.indexOf(ordered);
 }
+
+//####################################################################
+//Given an integer n and two other values, build an array of size n filled with these two values alternating.
+// 5, true, false     -->  [true, false, true, false, true]
+
+function alternate(n, firstValue, secondValue) {
+  let arr = [];
+  for (let i = 1; i <= n; i++) {
+    if (i % 2 !== 0) {
+      arr.push(firstValue);
+    } else {
+      arr.push(secondValue);
+    }
+  }
+  return arr;
+}
