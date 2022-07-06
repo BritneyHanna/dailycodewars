@@ -78,3 +78,11 @@ function alternate(n, firstValue, secondValue) {
   }
   return arr;
 }
+//*********************************************************************** */
+//Calculate the remainder of the division by 256 without the %-operator.
+//Need to Review 
+function mod256WithoutMod(number) {
+  while (number > 255) number -= 256;
+  while (number < -255) number += 256;
+  return number;
+}
