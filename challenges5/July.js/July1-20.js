@@ -86,3 +86,5 @@ function mod256WithoutMod(number) {
   while (number < -255) number += 256;
   return number;
 }
+//alternative answer on codewars
+const mod256WithoutMod = (number) => number - 256 * parseInt(number / 256);
