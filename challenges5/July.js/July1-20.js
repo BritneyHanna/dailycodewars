@@ -88,3 +88,11 @@ function mod256WithoutMod(number) {
 }
 //alternative answer on codewars
 const mod256WithoutMod = (number) => number - 256 * parseInt(number / 256);
+
+//********************************************************************** */
+// Your task is to find the nearest square number, nearest_sq(n), of a positive integer n.
+//In order to find the next number that is a square of itself first find the square root of n round that up to the next nearest whole number and then multiply that next whole number by itself
+function nearestSq(n) {
+  return Math.round(Math.sqrt(n)) ** 2;
+}
+//could have also wrapped everything inside Math.pow method 
