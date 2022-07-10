@@ -95,4 +95,19 @@ const mod256WithoutMod = (number) => number - 256 * parseInt(number / 256);
 function nearestSq(n) {
   return Math.round(Math.sqrt(n)) ** 2;
 }
-//could have also wrapped everything inside Math.pow method 
+//could have also wrapped everything inside Math.pow method
+//***************************************************************** */
+
+// Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+// If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+// Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+// i.e.
+
+// friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
+
+function friend(friends) {
+  return friends.filter((el) => el.length === 4);
+}
