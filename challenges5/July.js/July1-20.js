@@ -205,3 +205,10 @@ let Ghost = function () {
     Math.floor(Math.random() * 4)
   ];
 };
+
+//******************************************************** */
+//Complete the function which converts hex number (given as a string) to a decimal number.
+
+function hexToDec(hexString) {
+  return parseInt(hexString, 16);
+}
