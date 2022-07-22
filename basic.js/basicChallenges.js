@@ -408,3 +408,16 @@ const closeCompare = (a, b, margin) => Math.abs(a - b) <= margin ? 0 : Math.sign
 //Jenny has written a function that returns a greeting for a user. However, she's in love with Johnny, and would like to greet him slightly different. She added a special case to her function, but she made a mistake.
 
 const greet = (name) => name === "Johnny" ? "Hello, my love!" : "Hello, " + name + "!";
+
+
+
+function predictAge(age1,age2,age3,age4,age5,age6,age7,age8){
+const ages=[];
+ ages.push(age1,age2,age3,age4,age5,age6,age7,age8);
+  let age = ages.map(el => {
+  return el*el
+}).reduce((a,c)=>a+c)
+   
+  
+  return Math. sqrt(age)/2
+}

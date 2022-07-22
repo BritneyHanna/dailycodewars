@@ -229,4 +229,45 @@ const getMiddle = (s) =>
     //other solution that I saw on codewars 
     function getMiddleB(s) {
       return s.substr(Math.ceil(s.length / 2 - 1), s.length % 2 === 0 ? 2 : 1);
-    }
+}
+    
+//My grandfather always predicted how old people would get, and right before he passed away he revealed his secret!
+
+// In honor of my grandfather's memory we will write a function using his formula!
+
+// Take a list of ages when each of your great-grandparent died.
+// Multiply each number by itself.
+// Add them all together.
+// Take the square root of the result.
+// Divide by two.
+
+
+function predictAge(age1, age2, age3, age4, age5, age6, age7, age8) {
+  const ages = [];
+  ages.push(age1, age2, age3, age4, age5, age6, age7, age8);
+  let age = ages
+    .map((el) => {
+      return el * el;
+    })
+    .reduce((a, c) => a + c, 0);
+
+  return Math.floor(Math.sqrt(age) / 2);
+}
+
+// other solutions I found on codewars 
+function predictAgeB(age1, age2, age3, age4, age5, age6, age7, age8) {
+  let arr = [age1, age2, age3, age4, age5, age6, age7, age8];
+  return Math.floor(
+    Math.sqrt(arr.map((a) => a * a).reduce((b, c) => b + c)) / 2
+  );
+}
+
+//other solutions I found on codewars 
+function predictAge(...age) {
+  var sum = 0;
+  for (var i = 0; i < age.length; i++) {
+    sum = age[i] * age[i] + sum;
+  }
+
+  return Math.floor(Math.sqrt(sum) / 2);
+}
