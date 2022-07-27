@@ -26,13 +26,12 @@ var scoobydoo = new Dog("Great Dane");
 
 // But as you will see after clicking RUN or ATTEMPT this code has several bugs, please fix them.
 
-
 const getStatus = (isBusy) => {
   let msg = isBusy ? "busy" : "available";
   return { status: msg };
 };
 
-//More concise syntax I found on codewars 
+//More concise syntax I found on codewars
 const getStatusB = (isBusy) => ({ status: isBusy ? "busy" : "available" });
 
 //**************************************************** */
@@ -45,7 +44,6 @@ const getStatusB = (isBusy) => ({ status: isBusy ? "busy" : "available" });
 // Javascript => String.fromCharCode(97) // a
 // C# => Tools.FromCharCode(97) // a
 let ArrowFunc = (arr) => arr.map((el) => String.fromCharCode(el)).join("");
-
 
 //The goal is to create a function 'numberToPower(number, power)' that "raises" the number up to power (ie multiplies number by itself power times).
 function numberToPower(number, power) {
@@ -89,10 +87,26 @@ const configuration = {
 
 // For a valid match, the candidate's minimum salary must be less than or equal to the job's maximum salary. However, let's also include 10% wiggle room (deducted from the candidate's minimum salary) in case the candidate is a rockstar who enjoys programming on Codewars in their spare time. The company offering the job may be able to work something out.
 
-
-
 function match(candidate, job) {
   return !candidate.minSalary || !job.maxSalary
     ? error
     : candidate.minSalary * 0.9 <= job.maxSalary;
 }
+//While making a zork-type game, you create an object of rooms. Unfortunately, the game is not working. Find all of the errors in the rooms object to get your game working again.
+
+let rooms = {
+  first: {
+    description: "This is the first room",
+    items: {
+      chair: "The old chair looks comfortable",
+      lamp: "This lamp looks ancient",
+    },
+  },
+  second: {
+    description: "This is the second room",
+    items: {
+      couch: "This couch looks like it would hurt your back",
+      table: "On the table there is an unopened bottle of water",
+    },
+  },
+};
