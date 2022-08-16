@@ -8,3 +8,5 @@ const FindFunction = function (func, arr) {
   const anonymous = func.find((el) => typeof el == "function");
   return arr.filter(anonymous);
 };
+
+//if I had used filter instead of find I would have to access the first index of the resulting array
