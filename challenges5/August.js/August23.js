@@ -11,3 +11,10 @@ String.prototype.capitalize = function () {
     //combine the now capitliazed first letter with the rest of the String 
   return String.fromCharCode(char) + this.slice(1);
 };
+
+//other solution I found on codewars
+String.prototype.capitalize = function () {
+  return this.replace(/^[a-z]/, (val) =>
+    String.fromCharCode(val.charCodeAt(0) - 32)
+  );
+};
