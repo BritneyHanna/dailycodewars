@@ -1,4 +1,6 @@
-const reverse=(str)=>{
+//Reverse a string
+
+const reverse = (str) => {
   //check input don't assume we will always receive a string 
   if(!str||str.length<2|| typeof str!=='string'){
     return `the input parameter is invalid for this function`
@@ -14,5 +16,13 @@ const reverse=(str)=>{
   
   
 }
+
+//Merge 2 sorted arrays 
+const mergeSortedArrays = (arr1, arr2) => {
+  return [...arr1, ...arr2].sort((a, b) => a - b);
+};
+
+
+
 
 
