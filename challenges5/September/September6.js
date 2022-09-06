@@ -24,3 +24,18 @@ function getPlanetName(id) {
 
   return name;
 }
+
+// Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+const maxSubArray = (arr) => {
+    let maxSum = arr[0];
+    let currentSum = arr[0];
+ 
+    for (let i = 1; i < arr.length; i++){
+      //compare the first num the array to the value of the first+second numbers assign current sum to larger value
+        currentSum = Math.max(currentSum + arr[i], arr[i]);
+        //compare the current value to the max value reassign to the larger value 
+      maxSum = Math.max(currentSum, maxSum);
+    }
+    // solution asked for the total not the sub array itself 
+    return maxSum
+}
