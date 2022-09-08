@@ -45,3 +45,5 @@ const findDuplicates = (arr) => {
 
 // the time complexity is linear because search in maps is 0(1) and the for loop is O(N)
 
+// this is an edge case where this function would fail [2,5,5,2,1] it would return 5 instead of 2--need to figure this out 
+ 
