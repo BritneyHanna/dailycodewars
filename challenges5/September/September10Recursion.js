@@ -1,6 +1,6 @@
 // Find the factorial of a number Recursive method 
 const findFactorial = (num) => {
-    if (num <= 2) {
+    if (num === 2) {
         return 2 
     }
   
