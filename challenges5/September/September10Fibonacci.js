@@ -11,14 +11,27 @@ function fib(n) {
   return fib(n - 1) + fib(n - 2);
 }
 //Time complexity is 02^N
+//Iterative solution
+
+const fibAtPosition = (position) => {
+  //first numbers in the fibonacci sequence are the same value as their index
+  if (position <= 1) return position;
+  const fibseq = [0, 1];
+  //start at 2 since first 2 numbers are already included in the sequence
+  for (let i = 0; i <= position; i++) {
+    const [nexttoLastNum, lastNum] = fibseq.slice(-2);
+    fibseq.push(nexttoLastNum + lastNum);
+  }
+  return fibseq[position];
+};
 
 
 
-
+//********************************************************************************************** */
 
 
 2.//return a fibonnaci sequence that is K numbers long 
-
+//iterative solution
 const fib=(K)=>{
   let fibarr=[0,1];
   while(K>2){
@@ -29,6 +42,15 @@ const fib=(K)=>{
   return fibarr
 }
 
-console.log(fib(12))
+//recursive solution 
+const fib = (K, fibarr = [0, 1]) => {
+  if (K <= 2) {
+    return fibarr;
+  }
+  const [firstnum, secondnum] = fibarr.slice(-2);
+  return fib(K - 1, [...fibarr, firstnum + secondnum]);
+};
 
-//Time complexity O(N)
+console.log(fib(12));
+
+
