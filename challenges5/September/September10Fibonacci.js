@@ -17,7 +17,7 @@ const fibAtPosition = (position) => {
   //first numbers in the fibonacci sequence are the same value as their index
   if (position <= 1) return position;
   const fibseq = [0, 1];
-  //start at 2 since first 2 numbers are already included in the sequence
+
   for (let i = 0; i <= position; i++) {
     const [nexttoLastNum, lastNum] = fibseq.slice(-2);
     fibseq.push(nexttoLastNum + lastNum);
