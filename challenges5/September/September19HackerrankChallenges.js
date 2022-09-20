@@ -53,3 +53,25 @@ function diagonalDifference(arr) {
 
 
 
+//write a function that checks if a number is a power of 2 
+function PowersofTwo(num) {
+  if (num === 1) {
+    return true;
+  } else {
+    let i = 1;
+    while (i < num) {
+      i *= 2;
+    }
+    return i === num;
+  }
+ 
+}
+//******************************************************************************* */
+
+//write a function that returns the longest word in a sentence--- sentence might have words or special characters
+
+function LongestWord(sen) {
+  sen = sen.match(/\w+/g);
+  return sen.sort((a, b) => b.length - a.length)[0];
+}
+
