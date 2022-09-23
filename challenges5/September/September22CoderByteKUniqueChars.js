@@ -48,4 +48,24 @@ const KUniqueCharacters = (str) => {
 
   return finalOutput[0];
 };
-   
+//Alternative method 
+function KUniqueCharacters(str) {
+  var k = +str[0],
+    longest = "";
+  for (let i = 1; i < str.length; i++) {
+    let currChars = str[i];
+    for (let j = i + 1; j < str.length; j++) {
+      if (currChars.includes(str[j]) && j != str.length - 1) continue;
+      else if (currChars.length < k) currChars += str[j];
+      else {
+        var currStr = currChars.includes(str[j])
+          ? str.slice(i)
+          : str.slice(i, j);
+        if (currStr.length > longest.length) longest = currStr;
+        break;
+      }
+    }
+  }
+  return longest;
+}
+KUniqueCharacters(readline());
