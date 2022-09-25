@@ -93,3 +93,47 @@ KUniqueCharacters(readline());
 // Returns
 
 // string: the encrypted string
+
+//function caesarCipher(s, k) {
+    // create the alpha array
+//     let alpha = 'abcdefghijklmnopqrstuvwxyz';
+//     let upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            
+//     let cipheredString  = '';
+//     let indexAlpha = 0;
+//     let indexUpper = 0;
+//     // k might be more than 26 so we need to find the modulus to see how many to rotate
+//     let kPlaces = k%26;
+//     // loop through each character of the string and convert it
+//     for(let i=0; i<s.length; i++){
+        
+//   
+//need to review 
+
+//if (alpha.indexOf(s[i]) >= 0) {
+        
+//             // find this string in alpha
+//             indexAlpha = alpha.indexOf(s[i]);
+//             if (indexAlpha < alpha.length - kPlaces){
+//                 cipheredString += alpha[indexAlpha+kPlaces];
+//             } else {
+//                 cipheredString += alpha[indexAlpha - alpha.length + kPlaces];
+//             }
+//         } else {
+//             // check if this is an uppercase version
+//             indexUpper = upper.indexOf(s[i]);
+//             if(indexUpper >= 0){
+//                 if (indexUpper < alpha.length - kPlaces){
+//                     cipheredString += upper[indexUpper+kPlaces];
+//                 } else {
+//                     cipheredString += upper[indexUpper - alpha.length + kPlaces];
+//                 }
+//             } else {
+//                 // this is not a alpha character, just print as is
+//                 cipheredString += s[i];
+//             }
+//         }
+//     }
+    
+//     return cipheredString;
+// }
