@@ -107,8 +107,8 @@ KUniqueCharacters(readline());
 //     // loop through each character of the string and convert it
 //     for(let i=0; i<s.length; i++){
         
-//   
-//need to review 
+//
+//need to review
 
 //if (alpha.indexOf(s[i]) >= 0) {
         
@@ -137,3 +137,13 @@ KUniqueCharacters(readline());
     
 //     return cipheredString;
 // }
+
+//Write a function to check if a string is an anagram
+//assuming both strings are lowercase
+
+const checkAnagram = (str1,str2) => {
+    let sorted1 = str1.split('').sort().join('')
+    let sorted2 = str2.split('').sort().join('');
+    return sorted1===sorted2
+}
+
